@@ -1,0 +1,18 @@
+# Пример файла конфигурации .env
+# Скопируйте этот файл в .env и заполните своими значениями
+
+# OpenAI API ключ (необходим для main_open_ai.py, main_lang.py, my_project.py)
+# Получить можно на https://platform.openai.com/api-keys
+OPENAI_API_KEY=sk-ваш_ключ_здесь
+
+# ID ассистента OpenAI (необходим для main_open_ai.py, my_project.py)
+# Создается в OpenAI Assistant API
+ASSISTANT_ID=asst-ваш_id_здесь
+
+# Токен Telegram бота (необходим для всех версий)
+# Получить можно у @BotFather в Telegram
+TELEGRAM_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz
+
+# Учётные данные GigaChat (необходим для main_giga.py)
+# Получить можно на https://developers.sber.ru/gigachat
+GIGACHAT_CREDENTIALS=ваш_токен_gigachat_здесь
