@@ -1,0 +1,12 @@
+.venv
+.git
+.idea
+__pycache__
+legacy
+data
+*.png
+*.md
+.env
+env-example
+.gitignore
+.DS_Store

@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: .
+    container_name: vk-gen-bot
+    restart: unless-stopped
+    mem_limit: 300m
+    environment:
+      - TZ=Europe/Moscow
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
