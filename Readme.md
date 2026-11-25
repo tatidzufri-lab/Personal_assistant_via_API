@@ -1,66 +1,68 @@
-# SMM-бот для постов ВКонтакте в голосе эксперта
+# VK Generator: a social media bot that writes in an expert's voice
 
-Telegram-бот помогает эксперту в инфобизнесе быстро писать контент для ВКонтакте: идеи, готовые посты, прогревы, продающие тексты, кейсы, ответы на возражения и доработку черновиков. Тексты звучат так, будто их написал сам эксперт.
+A Telegram bot that helps an expert or coach write content for VKontakte (VK), Russia's largest social network: post ideas, finished posts, warm-up posts, sales posts, case stories, answers to objections and edits of drafts. The texts sound like the expert wrote them.
 
-![Пример готового поста](demo/bot_post_generation_demo.png)
+This is a practice project. Case study: [tatidzufri.com/en/case/vk-generator](https://tatidzufri.com/en/case/vk-generator). The bot speaks Russian.
 
-## О проекте
+![A finished post](demo/bot_post_generation_demo.png)
 
-Бот хранит профиль эксперта: нишу, аудиторию, тон, продукты и особенности подачи. Профиль подставляется в системный промпт при каждой генерации, поэтому стиль не нужно объяснять заново. Тип контента выбирается кнопкой, бот задает один уточняющий вопрос и присылает пост, оформленный под ВКонтакте.
+## About the project
 
-Модель переключается кнопкой: OpenAI GPT-4o или GigaChat.
+The bot keeps an expert profile: niche, audience, tone, products and style notes. The profile goes into the system prompt on every generation, so the style never has to be explained again. The content type is picked with a button, the bot asks one clarifying question and sends a post formatted for VK.
 
-## Задача
+A button switches the model between OpenAI GPT-4o and GigaChat.
 
-Эксперт тратил больше 15 часов в неделю на посты для ВКонтакте. Контент становился однообразным, охваты падали, а копирайтер в этой нише не окупался. Работа с ChatGPT в браузере тоже не спасала: каждый раз приходилось заново описывать свой стиль, аудиторию и формат соцсети.
+## The task
 
-## Решение
+Experts who sell courses and consultations need a steady stream of posts, and writing them eats hours every week. Posts start to sound alike, and a copywriter rarely pays off in a small niche. ChatGPT in the browser doesn't solve it either: every time you have to describe your style, audience and the social network's format from scratch.
 
-1. **Профиль эксперта.** Команда `/setup` запускает анкету из пяти вопросов: имя и ниша, аудитория, тон и лексика, продукты и офферы, особенности подачи и табу. Профиль можно посмотреть командой `/profile`, перенастроить или сбросить.
-2. **Семь сценариев.** Десять идей для постов с заголовками и призывом к действию. Готовый пост от заголовка до хештегов. Прогрев, который подводит к продаже без продажи в лоб. Продающий пост по классической структуре от боли к офферу. Кейс клиента по схеме «точка А, что делали, точка Б». Пост, который разбирает возражение вроде «дорого» или «не получится». Доработка черновика с объяснением, что и почему изменено.
-3. **Оформление под ВКонтакте.** Без markdown, который ВК не показывает, короткие абзацы, умеренные эмодзи, призыв к действию и 3–6 хештегов. Если модель все же вставит разметку, бот вычистит ее перед отправкой.
-4. **Две модели.** Кнопка «Модель» или команда `/model` переключает OpenAI и GigaChat. Обе работают через общий интерфейс, сценарии и профиль действуют одинаково.
-5. **Правки в диалоге.** После генерации можно написать «сделай короче» или «замени призыв на запись в личку», или нажать «Еще вариант». Команда `/reset` очищает контекст.
+## How it works
 
-## Как это выглядит
+1. **Expert profile.** `/setup` starts a five-question onboarding: name and niche, audience, tone and vocabulary, products and offers, style notes and taboos. `/profile` shows the profile, which can be redone or reset.
+2. **Seven scenarios.** Ten post ideas with headlines and calls to action. A finished post from headline to hashtags. A warm-up that leads toward a sale without a hard pitch. A sales post with the classic structure from pain to offer. A client story built as "point A, what we did, point B". A post that takes on an objection such as "too expensive" or "it won't work for me". An edit of a draft with an explanation of what changed and why.
+3. **Formatted for VK.** No markdown, which VK doesn't render; short paragraphs, a few emoji, a call to action and 3–6 hashtags. If the model slips markdown in anyway, the bot strips it before sending.
+4. **Two models.** The "Model" button or `/model` switches between OpenAI and GigaChat. Both sit behind one interface, so scenarios and the profile work the same way.
+5. **Edits in the chat.** After a post is generated you can write "make it shorter" or "change the call to action to a DM", or press "Another version". `/reset` clears the context.
 
-| Меню и идеи | Анкета эксперта | Готовый пост |
+## What it looks like
+
+| Menu and ideas | Expert profile | Finished post |
 |:-:|:-:|:-:|
 | ![](demo/01_main_menu_and_ideas_request.png) | ![](demo/04_setup_profile_questions.png) | ![](demo/06_generated_post_delegation.png) |
-| **Прогрев** | **Продающий пост** | **Кейс** |
+| **Warm-up** | **Sales post** | **Client story** |
 | ![](demo/08_warmup_post_with_next_step.png) | ![](demo/09_selling_post_consultation.png) | ![](demo/11_case_post_finished_and_menu.png) |
 
-Остальные шаги (вторая часть идей, сохранение профиля, возражения и смена модели, просмотр профиля) лежат в `demo/`.
+The other steps (the second half of the ideas, saving the profile, objections and switching models, viewing the profile) are in `demo/`.
 
-## Результат
+## Results
 
-- Время на пост сократилось с 40 до 2 минут.
-- Охваты выросли на 30%.
-- Заявок из соцсетей стало на 15% больше.
+- Seven content scenarios behind one menu, each using the saved expert profile.
+- Two interchangeable models, OpenAI and GigaChat, with the same scenarios and profile.
+- VK formatting is enforced in code, not just requested in the prompt.
 
-## Стек технологий
+## Tech stack
 
-| Технология | Зачем используется |
+| Technology | What it's for |
 |---|---|
-| **Python** | Язык бота, в контейнере 3.12 |
-| **python-telegram-bot** | Кнопки, диалоги, команды, анкета профиля |
-| **OpenAI API** | Основная модель генерации, по умолчанию `gpt-4o` |
-| **GigaChat API** | Вторая модель, по умолчанию `GigaChat-2-Max` |
-| **python-dotenv** | Ключи в `.env`, вне кода |
-| **Docker Compose** | Запуск бота на сервере, профили экспертов хранятся в `data/` |
+| **Python** | Bot language, 3.12 in the container |
+| **python-telegram-bot** | Buttons, dialogs, commands, profile onboarding |
+| **OpenAI API** | Main generation model, `gpt-4o` by default |
+| **GigaChat API** | Second model, `GigaChat-2-Max` by default |
+| **python-dotenv** | Keys in `.env`, outside the code |
+| **Docker Compose** | Runs the bot on the server; expert profiles are stored in `data/` |
 
-## Структура репозитория
+## Repository structure
 
-- `bot.py`: меню, сценарии, команды, кнопки и анкета профиля.
-- `prompts.py`: системный промпт с правилами оформления под ВК и шаблоны семи сценариев.
-- `profiles.py`: анкета, сохранение и чтение профилей в JSON.
-- `llm.py`: общий интерфейс к OpenAI и GigaChat, очистка markdown.
-- `config.py`: настройки из `.env`.
-- `legacy/`: ранние версии проекта на Assistants API, LangChain и GigaChat.
-- `INSTRUCTIONS.md`: инструкция для пользователя бота.
-- `demo/`: скриншоты.
+- `bot.py`: menu, scenarios, commands, buttons and the profile onboarding.
+- `prompts.py`: the system prompt with VK formatting rules and the seven scenario templates.
+- `profiles.py`: onboarding, saving and loading profiles as JSON.
+- `llm.py`: one interface to OpenAI and GigaChat, markdown cleanup.
+- `config.py`: settings from `.env`.
+- `legacy/`: early versions on the Assistants API, LangChain and GigaChat.
+- `INSTRUCTIONS.md`: a user guide for the bot (in Russian).
+- `demo/`: screenshots.
 
-## Запуск
+## Running it
 
 ```bash
 python3 -m venv .venv
@@ -69,12 +71,12 @@ cp env-example .env
 .venv/bin/python bot.py
 ```
 
-В `.env` нужны `TELEGRAM_TOKEN` и `OPENAI_API_KEY`. `GIGACHAT_CREDENTIALS` нужен, только если хочется переключаться на GigaChat. Если ключа какого-то провайдера нет, бот скажет об этом при переключении.
+`.env` needs `TELEGRAM_TOKEN` and `OPENAI_API_KEY`. `GIGACHAT_CREDENTIALS` is only needed if you want to switch to GigaChat. If a provider's key is missing, the bot says so when you switch.
 
-В Docker: `docker compose up -d --build`.
+With Docker: `docker compose up -d --build`.
 
-Дальше в Telegram: `/start`, настройка профиля через `/setup` и выбор сценария в меню.
+Then in Telegram: `/start`, set up the profile with `/setup` and pick a scenario from the menu.
 
-## Автор
+## Author
 
-Татьяна Дзюбас, AI-инженер по автоматизации. Делаю Telegram-ботов, RAG-ассистентов и LLM-агентов, которые снимают рутину с небольших команд. Кейсы и контакты на [tatidzufri.com](https://tatidzufri.com).
+Tetiana Dziubas, AI automation engineer. I build Telegram bots, RAG assistants and LLM agents that take routine work off small teams. Case studies and contact: [tatidzufri.com/en](https://tatidzufri.com/en/).

@@ -1,74 +1,74 @@
-# Как пользоваться ботом
+# How to use the bot
 
-Инструкция для эксперта, который пишет посты для ВКонтакте с помощью бота. Технические знания не нужны.
+A guide for an expert who writes VKontakte (VK) posts with the bot. No technical knowledge needed. The bot itself speaks Russian; the button and command names below are translated for reference.
 
-## Шаг 1. Откройте бота
+## Step 1. Open the bot
 
-Найдите бота в Telegram и нажмите «Start» или отправьте `/start`. Появится главное меню с кнопками.
+Find the bot in Telegram and press "Start" or send `/start`. The main menu with buttons appears.
 
-## Шаг 2. Расскажите о себе
+## Step 2. Tell it about yourself
 
-Это нужно сделать один раз. Отправьте `/setup`, и бот задаст пять вопросов:
+You only do this once. Send `/setup`, and the bot asks five questions:
 
-1. Как вас зовут и в какой нише вы работаете.
-2. Кто ваша аудитория, какие у нее боли и желания.
-3. Каким тоном вы общаетесь: на ты или на вы, с юмором или строго, с эмодзи или без.
-4. Какие продукты вы продаете и какие офферы обычно используете.
-5. Особенности подачи: любимые форматы и то, чего в ваших текстах быть не должно.
+1. Your name and your niche.
+2. Who your audience is, their pains and wishes.
+3. The tone you use: informal or formal, with humor or strict, with emoji or without.
+4. The products you sell and the offers you usually make.
+5. Style notes: your favorite formats and what must never appear in your texts.
 
-Отвечайте своими словами, как рассказали бы живому копирайтеру. Чем подробнее ответ, тем точнее бот попадет в ваш стиль. Дальше все тексты он будет писать вашим голосом.
+Answer in your own words, the way you'd brief a real copywriter. The more detail, the closer the bot gets to your style. From then on it writes every text in your voice.
 
-Посмотреть профиль можно командой `/profile`, там же есть кнопки «Настроить заново» и «Сбросить». Прервать анкету на середине можно командой `/cancel`.
+`/profile` shows your profile, with "Set up again" and "Reset" buttons. `/cancel` stops the questionnaire halfway.
 
-## Шаг 3. Выберите, что написать
+## Step 3. Choose what to write
 
-В меню (`/menu`) семь кнопок:
+The menu (`/menu`) has seven buttons:
 
-| Кнопка | Когда нажимать |
+| Button | When to press it |
 |---|---|
-| Идеи для постов | Не знаете, о чем писать. Бот предложит 10 идей под вашу задачу |
-| Готовый пост | Нужна публикация на конкретную тему |
-| Прогрев | Готовите аудиторию к запуску или продаже |
-| Продающий пост | Продаете продукт, услугу или консультацию |
-| Кейс | Хотите рассказать о результате клиента |
-| Отработка возражений | Аудитория сомневается: «дорого», «не получится», «не сейчас» |
-| Доработать мой текст | Есть черновик. Бот усилит его и объяснит, что поменял |
+| Post ideas | You don't know what to write about. The bot suggests 10 ideas for your goal |
+| Finished post | You need a post on a specific topic |
+| Warm-up | You're preparing your audience for a launch or a sale |
+| Sales post | You're selling a product, service or consultation |
+| Client story | You want to tell about a client's result |
+| Handling objections | Your audience doubts: "too expensive", "it won't work for me", "not now" |
+| Improve my text | You have a draft. The bot strengthens it and explains what it changed |
 
-Нажмите кнопку и ответьте на вопрос бота одним сообщением. Через несколько секунд придет текст с заголовком, структурой, призывом к действию и хештегами.
+Press a button and answer the bot's question in one message. A text arrives with a headline, structure, call to action and hashtags.
 
-## Шаг 4. Доработайте текст
+## Step 4. Polish the text
 
-Если вариант не понравился, есть два способа его поправить.
+If you don't like a version, there are two ways to fix it.
 
-Кнопка «Еще вариант» перепишет тот же текст с другой подачей.
+The "Another version" button rewrites the same text with a different angle.
 
-Или напишите правку обычным сообщением: «сделай короче», «добавь юмора», «убери эмодзи», «замени призыв на запись в личные сообщения». Бот помнит, над каким текстом вы работаете, и внесет изменения.
+Or write the edit as a normal message: "make it shorter", "add some humor", "remove the emoji", "change the call to action to a DM". The bot remembers which text you're working on and makes the change.
 
-Готовый текст можно сразу копировать в пост: он уже оформлен под ВКонтакте, без лишней разметки.
+The finished text can go straight into a post: it's already formatted for VK, with no extra markup.
 
-## Другая нейросеть
+## Another model
 
-По умолчанию бот пишет на OpenAI GPT-4o. Чтобы попробовать GigaChat, нажмите в меню кнопку «Модель» или отправьте `/model` и выберите нейросеть. Ваш профиль при этом сохраняется.
+By default the bot writes with OpenAI GPT-4o. To try GigaChat, press the "Model" button in the menu or send `/model` and pick the model. Your profile is kept.
 
-## Команды
+## Commands
 
-| Команда | Что делает |
+| Command | What it does |
 |---|---|
-| `/start` | Приветствие и главное меню |
-| `/menu` | Меню сценариев |
-| `/setup` | Анкета о вашем стиле |
-| `/profile` | Посмотреть, перенастроить или сбросить профиль |
-| `/cancel` | Прервать анкету |
-| `/model` | Переключить нейросеть: OpenAI или GigaChat |
-| `/reset` | Начать с чистого листа, бот забудет текущий текст |
-| `/help` | Короткая справка |
+| `/start` | Greeting and the main menu |
+| `/menu` | The scenario menu |
+| `/setup` | The questionnaire about your style |
+| `/profile` | View, redo or reset your profile |
+| `/cancel` | Stop the questionnaire |
+| `/model` | Switch the model: OpenAI or GigaChat |
+| `/reset` | Start from scratch; the bot forgets the current text |
+| `/help` | A short help message |
 
-## Как получить текст лучше
+## Getting better texts
 
-**Заполните профиль подробно.** «Психолог» и «психолог, работаю с выгоранием у предпринимателей, говорю на ты, без эзотерики» дают очень разные тексты.
+**Fill in the profile in detail.** "Psychologist" and "psychologist working with burnout in business owners, informal tone, no esoterics" give very different texts.
 
-**Добавляйте факты.** Для кейса нужны цифры и сроки, для продающего поста цена и условия. Факты бот не придумывает. Где данных не хватило, он оставит пометку в квадратных скобках, например [цифра]. Заполните ее перед публикацией.
+**Add facts.** A client story needs numbers and dates, a sales post needs the price and terms. The bot doesn't invent facts. Where data is missing it leaves a placeholder in square brackets, for example [number]. Fill it in before publishing.
 
-**Правьте в диалоге.** Первый вариант считайте черновиком, одна-две правки сообщением обычно доводят его до готового.
+**Edit in the chat.** Treat the first version as a draft; one or two edits by message usually make it ready.
 
-**Перечитывайте перед публикацией.** Последнее слово всегда за вами.
+**Reread before publishing.** The last word is always yours.
